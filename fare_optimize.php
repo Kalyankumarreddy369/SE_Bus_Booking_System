@@ -40,16 +40,7 @@ $myconn = new mysqli("localhost","root","root","usvisaapplication");
 if(!empty($_POST['user_id']) && !empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['password']) )
 {
     $sqlqry = "INSERT INTO `userdata`(`user_id`,`name`,`email`,`password`) VALUES (?,?,?,?)";
-    if ($stmt = $myconn->prepare($sqlqry)) {
-        $stmt->bind_param("isss",$_POST['user_id'],$_POST['name'],$_POST['email'],$_POST['password']);
-        if($stmt->execute()){
-            if($myconn->affected_rows){
-              $res['status'] = 1;
-              $res['rows_affected'] = $myconn->affected_rows;
-            }
-        }
-        
-    }
+   
     else{
         echo "statement Notttt prepared";
     }
