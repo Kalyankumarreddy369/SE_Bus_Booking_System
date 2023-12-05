@@ -50,6 +50,7 @@ if(!empty($_POST['user_id']) && !empty($_POST['name']) && !empty($_POST['email']
         }
         
     }
+
     else{
         echo "statement Notttt prepared";
     }
