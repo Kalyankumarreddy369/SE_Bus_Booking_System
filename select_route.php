@@ -37,10 +37,7 @@
                }       
             }
  		
-      if($count <= 1 ){
-         $update=mysqli_query($dbcon,"UPDATE booking SET fare='$total_fare' WHERE booking_id='$booking_id'");
-         header("location:add_booking.php?successmessage=successfully Booked.");
-      }
+      
  	
  }else{
    header("location:add_booking.php?message=Please Fill all required fields.");
